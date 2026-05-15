@@ -2,177 +2,263 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Lusia Kaushiningwa showcasing web development projects.">
-    <meta name="author" content="Lusia Kaushiningwa">
-    <link rel="icon" href="assets/favicon.jpg">
-    <meta property="og:title" content="Lusia Kaushiningwa Portfolio">
-    <meta property="og:description" content="Web development projects using HTML, CSS, JavaScript, and Bootstrap.">
-    <meta property="og:image" content="images/preview.png">
-    <meta name="theme-color" content="#1e3a8a">
-    <title>Home | Lusia Kaushiningwa Portfolio</title>
-    <!-- Adding favicon for older and modern browsers,
-      -->
-    <link rel="shortcut icon" href="assets/Code blossom.jpg">
-    <link rel="icon" href="assets/Code blossom.jpg">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Montserrat:wght@200;400&family=Oswald:wght@200;400&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Lusia Kaushiningwa showcasing web development projects.">
+  <meta name="author" content="Lusia Kaushiningwa">
+  <meta property="og:title" content="Lusia Kaushiningwa Portfolio">
+  <meta property="og:description" content="Web development projects using HTML, CSS, JavaScript, and Bootstrap.">
+  <meta property="og:image" content="images/preview.png">
+  <meta name="theme-color" content="#1e3a8a">
+  <title>Home | Lusia Kaushiningwa Portfolio</title>
+  <link rel="shortcut icon" href="assets/Code blossom.jpg">
+  <link rel="icon" href="assets/Code blossom.jpg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Montserrat:wght@200;400&family=Oswald:wght@200;400&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <!-- navigation bar -->
-    <nav class="sticky">
-        <label for="drop" class="toggle" id="main-toggle">
-            <span class="nav-icon"></span>
-        </label>
-        <input type="checkbox" id="drop">
-        <ul class="main-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about-me.html">About me</a></li>
-            <li><a href="skill-set.html">Skill-set</a></li>
-            <li><a href="portfolio.html">Projects</a></li>
-            <li><a href="#contact-me">Contact me</a></li>
+
+  <!-- ══ NAVBAR ══
+    navbar-expand-lg  = horizontal on lg+, hamburger on smaller screens
+    sticky-top        = sticks to top on scroll
+    shadow-sm         = subtle drop shadow
+    ms-auto           = margin-start auto = pushes nav links to the right
+  -->
+  <nav class="navbar navbar-expand-lg sticky-top shadow-sm mb-4">
+    <div class="container">
+      <a class="navbar-brand font-grace fs-3" href="index.html">Lusia</a>
+      <button class="navbar-toggler" type="button"
+              data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto gap-lg-2">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about-me.html">About me</a></li>
+          <li class="nav-item"><a class="nav-link" href="skill-set.html">Skill-set</a></li>
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact-me">Contact me</a></li>
         </ul>
-    </nav>
-    <!-- introduction -->
-    <header class="grid-system-2 w-900 padding">
-        <section class="align-center">
-            <h1 class="medium-spacing">Hello, I am </h1>
-            <h1 class="large">Lusia</h1>
-            <p class="justify">Beginner Full-Stack Developer passionate about building clean, responsive, and user-friendly websites. Skilled in HTML, CSS, JavaScript, and modern web technologies, with a strong focus on writing structured, maintainable code and creating
-                smooth user experiences across devices.</p>
-        </section>
-        <section class="center align-center">
-            <img class="header-img max-width max-height" src="assets/Lusia.png" alt="profile-picture">
-        </section>
-    </header>
+      </div>
+    </div>
+  </nav>
 
 
-    <!-- quote -->
-    <article class="baby-pink">
-        <p class="quote uppercase">I don't just write code</p>
-        <p>I build possibilities. Every bug teaches me patience, every project shapes my growth. I'm not where I want to be yet, but I'm brave enough to keep building until I get there.</p>
-    </article>
+  <!-- ══ HERO ══
+    container         = centres with responsive max-width
+    py-4              = padding-top and padding-bottom
+    row               = Bootstrap flex row
+    col-12 col-md-6   = full width on mobile, half-width on md+
+    align-items-center = vertically centre both columns
+    gy-4              = vertical gap between stacked columns on mobile
+    order-*           = controls visual order on different breakpoints
+  -->
+  <header class="container py-4">
+    <div class="row align-items-center gy-4">
+      <div class="col-12 col-md-6">
+        <p class="section-heading mb-1">Hello, I am</p>
+        <h1 class="hero-name mb-3">Lusia</h1>
+        <p class="text-secondary">
+          Beginner Full-Stack Developer passionate about building clean, responsive, and
+          user-friendly websites. Skilled in HTML, CSS, JavaScript, and modern web
+          technologies, with a strong focus on writing structured, maintainable code.
+        </p>
+        <!-- d-flex + gap-3 = row of buttons with spacing; flex-wrap = wraps on tiny screens -->
+        <div class="d-flex gap-3 flex-wrap mt-3">
+          <a href="portfolio.html" class="btn-lusia">View Projects</a>
+          <a href="#contact-me"   class="btn-lusia">Contact me</a>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 text-center">
+        <!-- img-fluid = width:100%, scales responsively -->
+        <img src="assets/Lusia.png" alt="Profile picture of Lusia" class="hero-img img-fluid">
+      </div>
+    </div>
+  </header>
 
-    <!-- about me -->
-    <section class="grid-system-2 w-900 padding">
-        <section class="margin-auto">
-            <img class="header-img max-width max-height" src="assets/Lusia2.png" alt="about-me-logo">
-        </section>
-        <section class="justify align-center">
-            <p class="bold">About me </p>
-            <p>I am a passionate beginner full-stack developer who believes that every great digital experience starts with a simple idea and the courage to build it. I enjoy transforming concepts into clean, responsive, and user-friendly websites that not
-                only look good but function smoothly. For me, coding is more than just syntax — it's about creating solutions that make an impact.</p>
-            <p>Every project I work on is an opportunity to grow, refine my skills, and push myself a little further. I pay attention to detail, value structure and performance, and strive to write code that is both efficient and meaningful. Challenges do
-                not scare me — they motivate me to learn, improve, and come back stronger.</p>
-            <p>If you are looking for someone dedicated, creative, and eager to bring fresh energy to your ideas, you are in the right place. Lets build something exciting together — the journey starts with one simple click below.</p>
-            <p class="padding-top"><a href="about-me.html" class="button-outline">More info</a></p>
-        </section>
-    </section>
 
-    <!-- skills -->
-    <section>
-        <h3 class="main-title center padding">Skills</h3>
-    </section>
-    <section class="wrapper">
-        <section class="column">
-            <p class="padding-bottom">Technical skills</p>
-            <section class="skills">
-                <ul class="no-bullet-list no-padding-list-item">
-                    <li>
-                        <p>html</p>
-                        <span class="progress-bar"><span class="html"></span></span>
-                    </li>
-                    <li>
-                        <p>css</p>
-                        <span class="progress-bar"><span class="css"></span></span>
-                    </li>
-                    <li>
-                        <p>javascript</p>
-                        <span class="progress-bar"><span class="javascript"></span></span>
-                    </li>
-                    <li>
-                        <p>php, mysql</p>
-                        <span class="progress-bar"><span class="php"></span></span>
-                    </li>
-                </ul>
-            </section>
-            <section class="column">
-                <p class="padding-bottom">Professional skills</p>
-                <section class="skills">
-                    <ul class="no-bullet-list no-padding-list-item">
-                        <li>
-                            <p>communication</p>
-                            <span class="progress-bar"><span class="comm-adapt"></span></span>
-                        </li>
-                        <li>
-                            <p>teamplayer, adaptability</p>
-                            <span class="progress-bar"><span class="team-player"></span></span>
-                        </li>
-                        <li>
-                            <p>problem solving</p>
-                            <span class="progress-bar"><span class="problem-solving"></span></span>
-                        </li>
-                        <li>
-                            <p>open-minded</p>
-                            <span class="progress-bar"><span class="open-minded"></span></span>
-                        </li>
-                    </ul>
-                </section>
-            </section>
-        </section>
-    </section>
-    <!-- Projects -->
-    <section>
-        <h3 class="main-title center padding">Projects I am currently working on</h3>
-    </section>
-    <section class="wrapper">
-        <section class="column card justify flex">
-            <img class="box" src="assets/project1.png" alt="project1">
-            <p class="padding bold center">My Portfolio</p>
-            <p>The aim of this project is to keep update about my skills and knowledge.</p>
-            <p class="padding-top bottom"><a href="portfolio.html" class="button-outline">My Portfolio</a></p>
-        </section>
-        <section class="column card justify flex">
-            <img class="box" src="assets/project2.png" alt="project2">
-            <p class="padding bold center">Smart Quiz App</p>
-            <p>We built a Smart Quiz App designed to make learning interactive and measurable. The app allows users to answer timed questions, receive instant feedback on their responses, and see their score at the end.</p>
-            <p class="padding-top bottom"><a href="portfolio.html" class="button-outline">Smart Quiz App</a></p>
-        </section>
-    </section>
+  <!-- ══ QUOTE BANNER ══ -->
+  <article class="bg-pink py-4 my-4">
+    <div class="container text-center">
+      <p class="quote-text mb-2">I don't just write code</p>
+      <p class="mb-0">
+        I build possibilities. Every bug teaches me patience, every project shapes my growth.
+        I'm not where I want to be yet, but I'm brave enough to keep building until I get there.
+      </p>
+    </div>
+  </article>
 
-    <!-- contact me -->
-    <section id="contact-me" class="grid-system-2 w-900 padding">
-        <section class="margin-auto">
-            <img class="max-width max-height" src="assets/Contact-me-img.png" alt="contact-me-illustration">
-        </section>
-        <section class="margin-auto align-center">
-            <h1 class="medium-spacing center">Let's get in touch!<span></span></h1>
-            <section class="box-contact margin-auto padding-top">
-                <span>
-                    <a href="https://www.linkedin.com/in/lusia-n-kaushiningwa-91851396" target="_blank"><img class="logo" src="assets/linkedin.png"
-                            alt=""></a>
-                </span>
-                <span>
-                    <a href="https://github.com/Lusia-Kaushiningwa" target="_blank"><img class="logo" src="assets/github.png" alt=""></a>
-                </span>
-                <span>
-                    <a href="mailto:lusia.kaushiningwa@gmail.com" target="_blank"><img class="logo" src="assets/email.png" alt=""></a>
-                </span>
-            </section>
-        </section>
-    </section>
-    <!-- footer -->
-    <footer>
-        <p>© <span id="year">2026</span> Lusia. All rights reserved.</p>
-    </footer>
-    <script src="js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- ══ ABOUT ME ══ -->
+  <section class="container py-4">
+    <div class="row align-items-center gy-4">
+      <!-- order-2 order-md-1: image below text on mobile, left on desktop -->
+      <div class="col-12 col-md-5 text-center order-2 order-md-1">
+        <img src="assets/Lusia2.png" alt="About Lusia" class="about-img img-fluid">
+      </div>
+      <div class="col-12 col-md-7 order-1 order-md-2">
+        <p class="section-heading fw-bold mb-3">About me</p>
+        <p>I am a passionate beginner full-stack developer who believes that every great digital experience starts with a simple idea and the courage to build it.</p>
+        <p>Every project I work on is an opportunity to grow, refine my skills, and push myself a little further. I pay attention to detail, value structure and performance.</p>
+        <p>If you are looking for someone dedicated, creative, and eager to bring fresh energy to your ideas, you are in the right place. Let's build something exciting together.</p>
+        <a href="about-me.html" class="btn-lusia mt-2 d-inline-block">More info</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══ SKILLS ══
+    g-4               = gap between columns
+    list-unstyled     = removes bullet points and left padding
+    d-flex + justify-content-between = label left, percentage right
+  -->
+  <section class="container py-4">
+    <h3 class="section-heading text-center mb-4">Skills</h3>
+    <div class="row g-4">
+
+      <div class="col-12 col-md-6">
+        <p class="fw-bold mb-3 text-uppercase font-oswald" style="letter-spacing:2px;">Technical Skills</p>
+        <ul class="list-unstyled">
+          <li class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="text-uppercase small">HTML</span><span class="small">90%</span>
+            </div>
+            <span class="skill-track d-block"><span class="skill-fill w-html"></span></span>
+          </li>
+          <li class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="text-uppercase small">CSS</span><span class="small">75%</span>
+            </div>
+            <span class="skill-track d-block"><span class="skill-fill w-css"></span></span>
+          </li>
+          <li class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="text-uppercase small">JavaScript</span><span class="small">63%</span>
+            </div>
+            <span class="skill-track d-block"><span class="skill-fill w-js"></span></span>
+          </li>
+          <li class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="text-uppercase small">PHP / MySQL</span><span class="small">54%</span>
+            </div>
+            <span class="skill-track d-block"><span class="skill-fill w-php"></span></span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <p class="fw-bold mb-3 text-uppercase font-oswald" style="letter-spacing:2px;">Professional Skills</p>
+        <ul class="list-unstyled">
+          <li class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="text-uppercase small">Communication</span><span class="small">90%</span>
+            </div>
+            <span class="skill-track d-block"><span class="skill-fill w-comm"></span></span>
+          </li>
+          <li class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="text-uppercase small">Team Player / Adaptability</span><span class="small">85%</span>
+            </div>
+            <span class="skill-track d-block"><span class="skill-fill w-team"></span></span>
+          </li>
+          <li class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="text-uppercase small">Problem Solving</span><span class="small">82%</span>
+            </div>
+            <span class="skill-track d-block"><span class="skill-fill w-problem"></span></span>
+          </li>
+          <li class="mb-3">
+            <div class="d-flex justify-content-between mb-1">
+              <span class="text-uppercase small">Open-Minded</span><span class="small">75%</span>
+            </div>
+            <span class="skill-track d-block"><span class="skill-fill w-open"></span></span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══ PROJECTS ══
+    row-cols-1        = 1 card per row on mobile
+    row-cols-md-2     = 2 cards per row on md+
+    h-100             = equal card height within the row
+    d-flex flex-column = enables mt-auto to push button to bottom
+    flex-grow-1       = description takes all available space above button
+    mt-auto           = button always at the bottom of the card
+  -->
+  <section class="container py-4">
+    <h3 class="section-heading text-center mb-4">Projects I am currently working on</h3>
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+
+      <div class="col">
+        <div class="card lusia-card h-100 p-3">
+          <img src="assets/project1.png" class="card-img-top rounded mb-3" alt="My Portfolio">
+          <div class="card-body d-flex flex-column p-0">
+            <p class="fw-bold text-center mb-2">My Portfolio</p>
+            <p class="card-text text-secondary flex-grow-1">
+              The aim of this project is to keep update about my skills and knowledge.
+            </p>
+            <a href="portfolio.html" class="btn-lusia mt-auto text-center">My Portfolio</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card lusia-card h-100 p-3">
+          <img src="assets/project2.png" class="card-img-top rounded mb-3" alt="Smart Quiz App">
+          <div class="card-body d-flex flex-column p-0">
+            <p class="fw-bold text-center mb-2">Smart Quiz App</p>
+            <p class="card-text text-secondary flex-grow-1">
+              We built a Smart Quiz App designed to make learning interactive and measurable.
+              Users answer timed questions, receive instant feedback, and see their score at the end.
+            </p>
+            <a href="portfolio.html" class="btn-lusia mt-auto text-center">Smart Quiz App</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══ CONTACT ME ══ -->
+  <section id="contact-me" class="container py-5">
+    <div class="row align-items-center gy-4">
+      <div class="col-12 col-md-5 text-center">
+        <img src="assets/Contact-me-img.png" alt="Contact illustration" class="img-fluid" style="max-height:280px;">
+      </div>
+      <div class="col-12 col-md-7 text-center">
+        <h2 class="section-heading mb-2">Let's get in touch!</h2>
+        <!-- d-flex justify-content-center gap-4 = centred icon row with spacing -->
+        <div class="d-flex justify-content-center gap-4 mt-3">
+          <a href="https://www.linkedin.com/in/lusia-n-kaushiningwa-91851396" target="_blank" rel="noopener">
+            <img src="assets/linkedin.png" alt="LinkedIn" class="contact-logo">
+          </a>
+          <a href="https://github.com/Lusia-Kaushiningwa" target="_blank" rel="noopener">
+            <img src="assets/github.png" alt="GitHub" class="contact-logo">
+          </a>
+          <a href="mailto:lusia.kaushiningwa@gmail.com">
+            <img src="assets/email.png" alt="Email" class="contact-logo">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <footer>
+    <p class="mb-0">© <span id="year"></span> Lusia. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
-
 </html>
